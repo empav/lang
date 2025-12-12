@@ -1,4 +1,3 @@
-import { requireAuth } from "@/lib/auth-utils";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -7,7 +6,6 @@ export default async function MarketingLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  await requireAuth();
   return (
     <div className="min-h-screen flex flex-col">
       <Header />

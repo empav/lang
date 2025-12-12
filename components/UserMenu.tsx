@@ -12,7 +12,7 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export function UserMenu() {
+export function UserMenu({ withName }: { withName?: boolean }) {
   const router = useRouter();
 
   const { data: session } = authClient.useSession();
@@ -23,17 +23,23 @@ export function UserMenu() {
     <div className="flex items-center gap-x-8">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button size={"icon"} variant="icon" aria-label="Open user menu">
-            <Avatar className="size-12">
-              {session.user.image ? (
-                <AvatarImage src={session.user.image} alt={session.user.name} />
-              ) : (
-                <AvatarFallback>
-                  {getUserInitials(session.user.name)}
-                </AvatarFallback>
-              )}
-            </Avatar>
-          </Button>
+          <div className="flex items-center gap-x-2 cursor-pointer">
+            <Button size={"icon"} variant="icon" aria-label="Open user menu">
+              <Avatar className="size-12">
+                {session.user.image ? (
+                  <AvatarImage
+                    src={session.user.image}
+                    alt={session.user.name}
+                  />
+                ) : (
+                  <AvatarFallback>
+                    {getUserInitials(session.user.name)}
+                  </AvatarFallback>
+                )}
+              </Avatar>
+            </Button>
+            {!!withName && <span>{session.user.name}</span>}
+          </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-44">
           <DropdownMenuItem asChild className="cursor-pointer">
@@ -43,7 +49,7 @@ export function UserMenu() {
               onClick={() =>
                 authClient.signOut({
                   fetchOptions: {
-                    onSuccess: () => router.replace("/login"),
+                    onSuccess: () => router.replace("/"),
                   },
                 })
               }

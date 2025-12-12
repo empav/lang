@@ -102,10 +102,10 @@ const SignForm = ({ isLogin }: SignFormProps) => {
   const isSubmitting = form.formState.isSubmitting;
 
   return (
-    <Card className="min-w-125">
+    <Card className="w-full lg:w-150">
       <CardHeader className="text-center">
-        <CardTitle className="flex items-center justify-center mb-2 text-green-600 font-extrabold text-2xl">
-          <Image src="/logos/logo.svg" alt="Logo Lang" width={80} height={80} />
+        <CardTitle className="flex items-center justify-center gap-x-2 mb-2 text-green-600 font-extrabold text-2xl">
+          <Image src="/mascot.svg" alt="Logo Lang" width={50} height={50} />
           Lang
         </CardTitle>
         <CardTitle>Welcome back</CardTitle>
