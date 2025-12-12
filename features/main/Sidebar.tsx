@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { SidebarItem } from "./SidebarItem";
-import { UserMenu } from "./UserMenu";
+import { UserMenu } from "@/components/UserMenu";
 
 type Props = {
   className?: string;
