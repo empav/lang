@@ -1,3 +1,3 @@
-export default function Marketing() {
+export default async function Marketing() {
   return <div>Marketing</div>;
 }
