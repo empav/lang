@@ -12,7 +12,7 @@ type Props = {
 export const List = ({ courses, activeCourseId }: Props) => {
   const router = useRouter();
 
-  const onClick = (id: string) => {
+  const onClick = (id: number) => {
     if (id === activeCourseId) {
       return router.push("/learn");
     }

@@ -1,8 +1,8 @@
-import { uuid } from "drizzle-orm/pg-core";
+import { serial } from "drizzle-orm/pg-core";
 import { pgTable, text } from "drizzle-orm/pg-core";
 
 export const courses = pgTable("courses", {
-  id: uuid("id").primaryKey(),
+  id: serial("id").primaryKey(),
   title: text("title").notNull(),
   imageSrc: text("image_src").notNull(),
 });

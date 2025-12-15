@@ -1,5 +1,5 @@
 {
-  "id": "99763a93-a0f1-4933-9e2c-ec7e6d18c204",
+  "id": "d16b13bc-6123-4373-80e9-33cb33d585a8",
   "prevId": "eb38a72a-2d4f-4256-b614-37f81809320d",
   "version": "7",
   "dialect": "postgresql",
@@ -10,7 +10,7 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "uuid",
+          "type": "serial",
           "primaryKey": true,
           "notNull": true
         },
@@ -24,7 +24,7 @@
           "name": "image_src",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "indexes": {},

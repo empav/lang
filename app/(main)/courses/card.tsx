@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 
 type Props = {
   title: string;
-  id: string;
+  id: number;
   imageSrc: string;
-  onClick: (id: string) => void;
+  onClick: (id: number) => void;
   disabled?: boolean;
   active?: boolean;
 };
