@@ -2,20 +2,29 @@
 
 import { useRouter } from "next/navigation";
 import { Card } from "./card";
-import { courses } from "@/drizzle/schema";
+import { courses, userProgress } from "@/drizzle/schema";
+import { useTransition } from "react";
+import { upsertUserProgress } from "@/actions/user-progress";
 
 type Props = {
   courses: (typeof courses.$inferSelect)[];
-  activeCourseId?: typeof courses.$inferSelect.id;
+  activeCourseId?: typeof userProgress.$inferSelect.activeCourseId;
 };
 
 export const List = ({ courses, activeCourseId }: Props) => {
   const router = useRouter();
+  const [pending, startTransition] = useTransition();
 
   const onClick = (id: number) => {
+    if (pending) return;
+
     if (id === activeCourseId) {
       return router.push("/learn");
     }
+
+    startTransition(() => {
+      upsertUserProgress(id).finally();
+    });
   };
 
   return (
@@ -27,7 +36,7 @@ export const List = ({ courses, activeCourseId }: Props) => {
           title={course.title}
           imageSrc={course.imageSrc}
           onClick={onClick}
-          disabled={false}
+          disabled={pending}
           active={course.id === activeCourseId}
         />
       ))}

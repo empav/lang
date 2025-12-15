@@ -3,10 +3,10 @@ import Image from "next/image";
 import { InfinityIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { courses } from "@/drizzle/schema";
 
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  activeCourse: any;
+  activeCourse: typeof courses.$inferSelect;
   hearts: number;
   points: number;
   hasActiveSubscription: boolean;
