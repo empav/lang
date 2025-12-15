@@ -11,26 +11,16 @@ export default async function Home() {
         <Image src="/hero.svg" fill alt="Hero" />
       </div>
       <div className="flex flex-col items-center gap-y-8">
-        <h1 className="text-xl lg:text-3xl font-bold text-neutral-600 max-w-120 text-center">
+        <h1 className="text-xl lg:text-3xl font-bold text-foreground max-w-120 text-center">
           Learn, practice, and master new languages with Lang.
         </h1>
         <div className="flex flex-col items-center gap-y-3 max-w-82.5 w-full">
           {!session?.user ? (
-            <>
-              <Button size="lg" variant="secondary" className="w-full" asChild>
-                <Link href="/signup">Get Started</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="primaryOutline"
-                className="w-full"
-                asChild
-              >
-                <Link href="/login">I already have an account</Link>
-              </Button>
-            </>
-          ) : (
             <Button size="lg" variant="secondary" className="w-full" asChild>
+              <Link href="/signup">Get Started</Link>
+            </Button>
+          ) : (
+            <Button size="lg" variant="primary" className="w-full" asChild>
               <Link href="/learn">Continue Learning</Link>
             </Button>
           )}

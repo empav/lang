@@ -25,6 +25,7 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const loginSchema = z.object({
   email: z.email("Please enter a valid email address"),
@@ -104,9 +105,12 @@ const SignForm = ({ isLogin }: SignFormProps) => {
   return (
     <Card className="w-full lg:w-150">
       <CardHeader className="text-center">
-        <CardTitle className="flex items-center justify-center gap-x-2 mb-2 text-green-600 font-extrabold text-2xl">
-          <Image src="/mascot.svg" alt="Logo Lang" width={50} height={50} />
+        <CardTitle className="flex items-center justify-center gap-x-2 mb-2 text-green-500 font-extrabold text-2xl">
+          <Link href="/">
+            <Image src="/mascot.svg" alt="Logo Lang" width={50} height={50} />
+          </Link>
           Lang
+          <ThemeToggle />
         </CardTitle>
         <CardTitle>Welcome back</CardTitle>
         <CardDescription>
@@ -136,6 +140,7 @@ const SignForm = ({ isLogin }: SignFormProps) => {
                   className="w-full"
                   type="button"
                   disabled={isSubmitting}
+                  variant={"primary"}
                   onClick={onSocialSign("google")}
                 >
                   <Image
@@ -224,6 +229,7 @@ const SignForm = ({ isLogin }: SignFormProps) => {
                   type="submit"
                   className="w-full"
                   disabled={isSubmitting}
+                  variant={"primary"}
                 >
                   {isLogin ? "Login" : "Sign up"}
                 </Button>

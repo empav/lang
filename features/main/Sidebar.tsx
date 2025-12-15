@@ -5,6 +5,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { SidebarItem } from "./SidebarItem";
 import { UserMenu } from "@/components/UserMenu";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 type Props = {
   className?: string;
@@ -21,9 +22,10 @@ const Sidebar = ({ className }: Props) => {
       <Link href="/learn">
         <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
           <Image src="/mascot.svg" height={40} width={40} alt="Mascot" />
-          <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
+          <h1 className="text-2xl font-extrabold text-green-500 tracking-wide mr-auto">
             Lang
           </h1>
+          <ThemeToggle />
         </div>
       </Link>
       <div className="flex flex-col gap-y-2 flex-1 mr-auto">

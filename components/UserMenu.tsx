@@ -32,7 +32,7 @@ export function UserMenu({ withName }: { withName?: boolean }) {
                     alt={session.user.name}
                   />
                 ) : (
-                  <AvatarFallback>
+                  <AvatarFallback className="bg-green-500 text-white">
                     {getUserInitials(session.user.name)}
                   </AvatarFallback>
                 )}

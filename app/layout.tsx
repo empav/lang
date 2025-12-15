@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const font = Nunito({
   subsets: ["latin"],
@@ -20,8 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font.className} antialiased`}>
-        <Toaster />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -3,18 +3,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="hidden lg:block h-20 w-full border-t-2 border-slate-200">
+    <footer className="hidden lg:block h-20 w-full border-t-2 border-foreground/15">
       <div className="flex items-center justify-evenly h-full">
-        <Button size="lg" variant="ghost" className="flex-1 size-full">
-          <Image
-            src="/hr.svg"
-            alt="Croatian"
-            height={32}
-            width={40}
-            className="mr-4 rounded-md"
-          />
-          Croatian
-        </Button>
         <Button size="lg" variant="ghost" className="flex-1 size-full">
           <Image
             src="/es.svg"
