@@ -1,0 +1,1 @@
+ALTER TABLE "courses" ALTER COLUMN "image_src" SET NOT NULL;
