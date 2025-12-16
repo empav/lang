@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 
 import { getLesson, getUserProgress } from "@/drizzle/queries";
+import Quiz from "./quiz";
 
 const LessonPage = async () => {
   const lessonData = getLesson();
@@ -21,7 +22,13 @@ const LessonPage = async () => {
     100;
 
   return (
-    <code>{JSON.stringify({ ...lesson, initialPercentage }, null, 2)}</code>
+    <Quiz
+      initialLessonId={lesson.id}
+      initialLessonChallenges={lesson.challenges}
+      initialHearts={userProgress.hearts}
+      initialPercentage={initialPercentage}
+      userSubscription={{}}
+    />
   );
 };
 
