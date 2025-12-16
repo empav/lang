@@ -53,7 +53,7 @@ export const LessonButton = ({
 
   return (
     <Link
-      href={isCompleted ? "#" : href}
+      href={href}
       aria-disabled={isCompleted}
       style={{ pointerEvents: locked ? "none" : "auto" }}
     >
@@ -85,7 +85,6 @@ export const LessonButton = ({
                 size="rounded"
                 variant={locked ? "locked" : "secondary"}
                 className="h-17.5 w-17.5 border-b-8"
-                disabled={isCompleted}
               >
                 <Icon
                   className={cn(
@@ -104,7 +103,6 @@ export const LessonButton = ({
             size="rounded"
             variant={locked ? "locked" : "secondary"}
             className="h-17.5 w-17.5 border-b-8"
-            disabled={isCompleted}
           >
             <Icon
               className={cn(
