@@ -45,25 +45,27 @@ const LearnPage = async () => {
       </StickyWrapper>
       <FeedWrapper>
         <Header title={userProgress.activeCourse.title} />
-        {units.map((unit) => (
-          <div key={unit.id} className="mb-10">
-            <Unit
-              id={unit.id}
-              order={unit.order}
-              description={unit.description}
-              title={unit.title}
-              lessons={unit.lessons}
-              activeLesson={
-                courseProgress.activeLesson as
-                  | (typeof lessons.$inferSelect & {
-                      unit: typeof unitsSchema.$inferSelect;
-                    })
-                  | undefined
-              }
-              activeLessonPercentage={lessonPercentage}
-            />
-          </div>
-        ))}
+        <div className="lg:mt-20 mt-10">
+          {units.map((unit) => (
+            <div key={unit.id} className="mb-10">
+              <Unit
+                id={unit.id}
+                order={unit.order}
+                description={unit.description}
+                title={unit.title}
+                lessons={unit.lessons}
+                activeLesson={
+                  courseProgress.activeLesson as
+                    | (typeof lessons.$inferSelect & {
+                        unit: typeof unitsSchema.$inferSelect;
+                      })
+                    | undefined
+                }
+                activeLessonPercentage={lessonPercentage}
+              />
+            </div>
+          ))}
+        </div>
       </FeedWrapper>
     </div>
   );
