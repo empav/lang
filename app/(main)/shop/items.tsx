@@ -3,17 +3,16 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useTransition } from "react";
-import { POINTS_TO_REFILL } from "@/constants";
+import { MAX_HEARTS, POINTS_TO_REFILL } from "@/constants";
 import { refillHearts } from "@/actions/user-progress";
 import { toast } from "sonner";
 
 type Props = {
   hearts: number;
   points: number;
-  hasActiveSubscription: boolean;
 };
 
-export const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
+export const Items = ({ hearts, points }: Props) => {
   const [pending, startTransition] = useTransition();
 
   const onRefillHearts = () => {
@@ -54,8 +53,8 @@ export const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
             Unlimited hearts
           </p>
         </div>
-        <Button onClick={() => {}} disabled={false}>
-          {hasActiveSubscription ? "settings" : "upgrade"}
+        <Button onClick={() => {}} disabled={pending}>
+          {hearts > MAX_HEARTS ? "settings" : "upgrade"}
         </Button>
       </div>
     </ul>

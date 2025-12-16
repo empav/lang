@@ -9,11 +9,7 @@ import { useAudio, useWindowSize, useMount } from "react-use";
 
 import { reduceHearts } from "@/actions/user-progress";
 import { useHeartsModal } from "@/store/use-hearts-modal";
-import {
-  challengeOptions,
-  challenges,
-  userSubscription,
-} from "@/drizzle/schema";
+import { challengeOptions, challenges } from "@/drizzle/schema";
 import { usePracticeModal } from "@/store/use-practice-modal";
 import { upsertChallengeProgress } from "@/actions/challenge-progress";
 
@@ -31,11 +27,6 @@ type Props = {
     completed: boolean;
     challengeOptions: (typeof challengeOptions.$inferSelect)[];
   })[];
-  userSubscription:
-    | (typeof userSubscription.$inferSelect & {
-        isActive: boolean;
-      })
-    | null;
 };
 
 export const Quiz = ({
@@ -43,7 +34,6 @@ export const Quiz = ({
   initialHearts,
   initialLessonId,
   initialLessonChallenges,
-  userSubscription,
 }: Props) => {
   const { open: openHeartsModal } = useHeartsModal();
   const { open: openPracticeModal } = usePracticeModal();
@@ -209,11 +199,7 @@ export const Quiz = ({
     <>
       {incorrectAudio}
       {correctAudio}
-      <Header
-        hearts={hearts}
-        percentage={percentage}
-        hasActiveSubscription={!!userSubscription?.isActive}
-      />
+      <Header hearts={hearts} percentage={percentage} />
       <div className="flex-1">
         <div className="h-full flex items-center justify-center">
           <div className="lg:min-h-87.5 lg:w-150 w-full px-6 lg:px-0 flex flex-col gap-y-12">

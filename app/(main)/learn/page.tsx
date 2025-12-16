@@ -40,7 +40,6 @@ const LearnPage = async () => {
           activeCourse={userProgress.activeCourse}
           hearts={userProgress.hearts}
           points={userProgress.points}
-          hasActiveSubscription={false}
         />
       </StickyWrapper>
       <FeedWrapper>

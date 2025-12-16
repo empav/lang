@@ -1,3 +1,8 @@
+//TODO Add subscription e.g. Stripe,Polar
+
+export const DEFAULT_HEARTS = 5;
+export const MAX_HEARTS = 1000;
+
 export const POINTS_TO_REFILL = 10;
 
 export const quests = [

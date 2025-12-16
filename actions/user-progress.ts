@@ -7,7 +7,7 @@ import { getCourseById, getUserProgress } from "@/drizzle/queries";
 import { db } from "@/drizzle/db";
 import { challengeProgress, challenges, userProgress } from "@/drizzle/schema";
 import { and, eq } from "drizzle-orm";
-import { POINTS_TO_REFILL } from "@/constants";
+import { DEFAULT_HEARTS, POINTS_TO_REFILL } from "@/constants";
 
 export const upsertUserProgress = async (courseId: number) => {
   const session = await getSession();
@@ -76,10 +76,6 @@ export const reduceHearts = async (challengeId: number) => {
     throw new Error("User progress not found");
   }
 
-  // if (userSubscription?.isActive) {
-  //   return { error: "subscription" };
-  // }
-
   if (currentUserProgress.hearts === 0) {
     return { error: "hearts" };
   }
@@ -98,7 +94,7 @@ export const reduceHearts = async (challengeId: number) => {
   revalidatePath(`/lesson/${lessonId}`);
 };
 
-export const refillHearts = async () => {
+export const refillHearts = async (howManyHearts: number = DEFAULT_HEARTS) => {
   const currentUserProgress = await getUserProgress();
 
   if (!currentUserProgress) {
@@ -116,7 +112,7 @@ export const refillHearts = async () => {
   await db
     .update(userProgress)
     .set({
-      hearts: 5,
+      hearts: howManyHearts,
       points: currentUserProgress.points - POINTS_TO_REFILL,
     })
     .where(eq(userProgress.userId, currentUserProgress.userId));

@@ -4,20 +4,15 @@ import { InfinityIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { courses } from "@/drizzle/schema";
+import { MAX_HEARTS } from "@/constants";
 
 type Props = {
   activeCourse: typeof courses.$inferSelect;
   hearts: number;
   points: number;
-  hasActiveSubscription: boolean;
 };
 
-export const UserProgress = ({
-  activeCourse,
-  points,
-  hearts,
-  hasActiveSubscription,
-}: Props) => {
+export const UserProgress = ({ activeCourse, points, hearts }: Props) => {
   return (
     <div className="flex items-center justify-between gap-x-2 w-full">
       <Link href="/courses">
@@ -52,7 +47,7 @@ export const UserProgress = ({
             alt="Hearts"
             className="mr-2"
           />
-          {hasActiveSubscription ? (
+          {hearts > MAX_HEARTS ? (
             <InfinityIcon className="h-4 w-4 stroke-3" />
           ) : (
             hearts
