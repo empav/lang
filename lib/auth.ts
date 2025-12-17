@@ -12,12 +12,6 @@ export const auth = betterAuth({
     autoSignIn: true,
   },
   socialProviders: {
-    github: {
-      // biome-ignore lint/style/noNonNullAssertion: <always defined>
-      clientId: process.env.GITHUB_CLIENT_ID!,
-      // biome-ignore lint/style/noNonNullAssertion: <always defined>
-      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
-    },
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,

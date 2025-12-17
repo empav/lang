@@ -94,7 +94,7 @@ const SignForm = ({ isLogin }: SignFormProps) => {
     }
   };
 
-  const onSocialSign = (provider: "github" | "google") => async () => {
+  const onSocialSign = (provider: "google") => async () => {
     await authClient.signIn.social({
       provider,
     });
@@ -127,20 +127,6 @@ const SignForm = ({ isLogin }: SignFormProps) => {
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <div className="grid gap-6">
               <div className="flex flex-col gap-4">
-                <Button
-                  className="w-full"
-                  type="button"
-                  disabled={isSubmitting}
-                  onClick={onSocialSign("github")}
-                >
-                  <Image
-                    alt="Github logo"
-                    src="/logos/github.svg"
-                    width={20}
-                    height={20}
-                  />
-                  Continue with Github
-                </Button>
                 <Button
                   className="w-full"
                   type="button"
