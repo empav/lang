@@ -7,7 +7,17 @@ const Footer = () => {
       <div className="flex items-center justify-evenly h-full">
         <Button size="lg" variant="ghost" className="flex-1 size-full">
           <Image
-            src="/es.svg"
+            src="/en.svg"
+            alt="English"
+            height={32}
+            width={40}
+            className="mr-4 rounded-md"
+          />
+          English
+        </Button>
+        <Button size="lg" variant="ghost" className="flex-1 size-full">
+          <Image
+            src="/es/es.svg"
             alt="Spanish"
             height={32}
             width={40}
@@ -37,13 +47,13 @@ const Footer = () => {
         </Button>
         <Button size="lg" variant="ghost" className="flex-1 size-full">
           <Image
-            src="/jp.svg"
-            alt="Japanese"
+            src="/de.svg"
+            alt="German"
             height={32}
             width={40}
             className="mr-4 rounded-md"
           />
-          Japanese
+          German
         </Button>
       </div>
     </footer>

@@ -8,7 +8,7 @@ const sql = neon(process.env.DATABASE_URL!);
 
 const db = drizzle(sql, { schema });
 
-const main = async () => {
+export const reset = async () => {
   try {
     await db.delete(schema.courses);
     await db.delete(schema.userProgress);
@@ -24,5 +24,3 @@ const main = async () => {
     throw new Error("Failed to reset the database");
   }
 };
-
-main();

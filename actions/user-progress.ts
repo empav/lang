@@ -31,7 +31,7 @@ export const upsertUserProgress = async (courseId: number) => {
       activeCourseId: courseId,
       userId: session.user.id,
       username: session.user.name.replace(" ", "").toLowerCase(),
-      userImageSrc: session.user.image || "/mascot.svg",
+      userImageSrc: session.user.image || "/logos/mascot.svg",
     });
   }
 

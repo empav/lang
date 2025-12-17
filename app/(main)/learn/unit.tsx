@@ -1,19 +1,18 @@
-import { lessons, units } from "@/drizzle/schema";
-
 import { UnitBanner } from "./unit-banner";
 import { LessonButton } from "./lesson-button";
+import type { Lesson, Unit as UnitType } from "@/drizzle/types";
 
 type Props = {
   id: number;
   order: number;
   title: string;
   description: string;
-  lessons: (typeof lessons.$inferSelect & {
+  lessons: (Lesson & {
     completed: boolean;
   })[];
   activeLesson:
-    | (typeof lessons.$inferSelect & {
-        unit: typeof units.$inferSelect;
+    | (Lesson & {
+        unit: UnitType;
       })
     | undefined;
   activeLessonPercentage: number;

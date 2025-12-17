@@ -1,15 +1,14 @@
 import { cn } from "@/lib/utils";
-import { challengeOptions, challenges } from "@/drizzle/schema";
-
 import { Card } from "./card";
+import { ChallengeOption, ChallengeType } from "@/drizzle/types";
 
 type Props = {
-  options: (typeof challengeOptions.$inferSelect)[];
+  options: ChallengeOption[];
   onSelect: (id: number) => void;
   status: "correct" | "wrong" | "none";
   selectedOption?: number;
   disabled?: boolean;
-  type: (typeof challenges.$inferSelect)["type"];
+  type: ChallengeType;
 };
 
 export const Challenge = ({

@@ -107,7 +107,12 @@ const SignForm = ({ isLogin }: SignFormProps) => {
       <CardHeader className="text-center">
         <CardTitle className="flex items-center justify-center gap-x-2 mb-2 text-green-500 font-extrabold text-2xl">
           <Link href="/">
-            <Image src="/mascot.svg" alt="Logo Lang" width={50} height={50} />
+            <Image
+              src="/logos/mascot.svg"
+              alt="Logo Lang"
+              width={50}
+              height={50}
+            />
           </Link>
           Lang
           <ThemeToggle />

@@ -6,26 +6,24 @@ import Confetti from "react-confetti";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { useAudio, useWindowSize, useMount } from "react-use";
-
 import { reduceHearts } from "@/actions/user-progress";
 import { useHeartsModal } from "@/store/use-hearts-modal";
-import { challengeOptions, challenges } from "@/drizzle/schema";
 import { usePracticeModal } from "@/store/use-practice-modal";
 import { upsertChallengeProgress } from "@/actions/challenge-progress";
-
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { Challenge } from "./challenge";
 import { ResultCard } from "./result-card";
 import { QuestionBubble } from "./question-bubble";
+import { ChallengeOption, Challenge as ChallengeType } from "@/drizzle/types";
 
 type Props = {
   initialPercentage: number;
   initialHearts: number;
   initialLessonId: number;
-  initialLessonChallenges: (typeof challenges.$inferSelect & {
+  initialLessonChallenges: (ChallengeType & {
     completed: boolean;
-    challengeOptions: (typeof challengeOptions.$inferSelect)[];
+    challengeOptions: ChallengeOption[];
   })[];
 };
 

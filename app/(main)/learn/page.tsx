@@ -10,7 +10,6 @@ import {
 } from "@/drizzle/queries";
 import { redirect } from "next/navigation";
 import { Unit } from "./unit";
-import { lessons, units as unitsSchema } from "@/drizzle/schema";
 
 const LearnPage = async () => {
   const userProgressData = getUserProgress();
@@ -53,13 +52,7 @@ const LearnPage = async () => {
                 description={unit.description}
                 title={unit.title}
                 lessons={unit.lessons}
-                activeLesson={
-                  courseProgress.activeLesson as
-                    | (typeof lessons.$inferSelect & {
-                        unit: typeof unitsSchema.$inferSelect;
-                      })
-                    | undefined
-                }
+                activeLesson={courseProgress.activeLesson}
                 activeLessonPercentage={lessonPercentage}
               />
             </div>

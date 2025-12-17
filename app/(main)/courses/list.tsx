@@ -2,13 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import { Card } from "./card";
-import { courses, userProgress } from "@/drizzle/schema";
 import { useTransition } from "react";
 import { upsertUserProgress } from "@/actions/user-progress";
+import { Course, UserProgress } from "@/drizzle/types";
 
 type Props = {
-  courses: (typeof courses.$inferSelect)[];
-  activeCourseId?: typeof userProgress.$inferSelect.activeCourseId;
+  courses: Course[];
+  activeCourseId?: UserProgress["activeCourseId"];
 };
 
 export const List = ({ courses, activeCourseId }: Props) => {

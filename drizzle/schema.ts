@@ -6,7 +6,6 @@ import {
   pgTable,
   serial,
   text,
-  timestamp,
 } from "drizzle-orm/pg-core";
 
 export const courses = pgTable("courses", {
@@ -119,7 +118,7 @@ export const challengeProgressRelations = relations(
 export const userProgress = pgTable("user_progress", {
   userId: text("user_id").primaryKey(),
   username: text("username").notNull().default("User"),
-  userImageSrc: text("user_image_src").notNull().default("/mascot.svg"),
+  userImageSrc: text("user_image_src").notNull().default("/logos/mascot.svg"),
   activeCourseId: integer("active_course_id").references(() => courses.id, {
     onDelete: "cascade",
   }),

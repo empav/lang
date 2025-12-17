@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { InfinityIcon } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
-import { courses } from "@/drizzle/schema";
 import { MAX_HEARTS } from "@/constants";
+import { Course } from "@/drizzle/types";
 
 type Props = {
-  activeCourse: typeof courses.$inferSelect;
+  activeCourse: Course;
   hearts: number;
   points: number;
 };

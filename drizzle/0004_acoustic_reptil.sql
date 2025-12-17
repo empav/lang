@@ -1,7 +1,7 @@
 CREATE TABLE "user_progress" (
 	"user_id" text PRIMARY KEY NOT NULL,
 	"username" text DEFAULT 'User' NOT NULL,
-	"user_image_src" text DEFAULT '/mascot.svg' NOT NULL,
+	"user_image_src" text DEFAULT '/logos/mascot.svg' NOT NULL,
 	"active_course_id" integer,
 	"hearts" integer DEFAULT 5 NOT NULL,
 	"points" integer DEFAULT 0 NOT NULL

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { useCallback } from "react";
 import { useAudio, useKey } from "react-use";
-
 import { cn } from "@/lib/utils";
-import { challenges } from "@/drizzle/schema";
+import { Challenge } from "@/drizzle/types";
 
 type Props = {
   id: number;
@@ -15,11 +14,10 @@ type Props = {
   onClick: () => void;
   disabled?: boolean;
   status?: "correct" | "wrong" | "none";
-  type: (typeof challenges.$inferSelect)["type"];
+  type: Challenge["type"];
 };
 
 export const Card = ({
-  id,
   imageSrc,
   audioSrc,
   text,
@@ -30,7 +28,7 @@ export const Card = ({
   disabled,
   type,
 }: Props) => {
-  const [audio, _, controls] = useAudio({ src: audioSrc || "" });
+  const [audio, , controls] = useAudio({ src: audioSrc || "" });
 
   const handleClick = useCallback(() => {
     if (disabled) return;
@@ -59,7 +57,7 @@ export const Card = ({
     >
       {audio}
       {imageSrc && (
-        <div className="relative aspect-square mb-4 max-h-[80px] lg:max-h-[150px] w-full">
+        <div className="relative aspect-square mb-4 max-h-20 lg:max-h-37.5 w-full">
           <Image src={imageSrc} fill alt={text} />
         </div>
       )}
@@ -82,7 +80,7 @@ export const Card = ({
         </p>
         <div
           className={cn(
-            "lg:w-[30px] lg:h-[30px] w-[20px] h-[20px] border-2 flex items-center justify-center rounded-lg text-neutral-400 lg:text-[15px] text-xs font-semibold",
+            "lg:w-7.5 lg:h-7.5 w-5 h-5 border-2 flex items-center justify-center rounded-lg text-neutral-400 lg:text-[15px] text-xs font-semibold",
             selected && "border-sky-300 text-sky-500",
             selected &&
               status === "correct" &&
