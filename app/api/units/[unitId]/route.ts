@@ -7,7 +7,7 @@ import { isAdmin } from "@/lib/admin";
 
 export const GET = async (
   req: Request,
-  { params }: { params: Promise<{ unitId: number }> }
+  { params }: { params: Promise<{ unitId: string }> }
 ) => {
   const p = await params;
   if (!isAdmin()) {
@@ -15,7 +15,7 @@ export const GET = async (
   }
 
   const data = await db.query.units.findFirst({
-    where: eq(units.id, p.unitId),
+    where: eq(units.id, Number(p.unitId)),
   });
 
   return NextResponse.json(data);
@@ -23,7 +23,7 @@ export const GET = async (
 
 export const PUT = async (
   req: Request,
-  { params }: { params: Promise<{ unitId: number }> }
+  { params }: { params: Promise<{ unitId: string }> }
 ) => {
   const p = await params;
   if (!isAdmin()) {
@@ -36,7 +36,7 @@ export const PUT = async (
     .set({
       ...body,
     })
-    .where(eq(units.id, p.unitId))
+    .where(eq(units.id, Number(p.unitId)))
     .returning();
 
   return NextResponse.json(data[0]);
@@ -44,14 +44,17 @@ export const PUT = async (
 
 export const DELETE = async (
   req: Request,
-  { params }: { params: Promise<{ unitId: number }> }
+  { params }: { params: Promise<{ unitId: string }> }
 ) => {
   const p = await params;
   if (!isAdmin()) {
     return new NextResponse("Unauthorized", { status: 403 });
   }
 
-  const data = await db.delete(units).where(eq(units.id, p.unitId)).returning();
+  const data = await db
+    .delete(units)
+    .where(eq(units.id, Number(p.unitId)))
+    .returning();
 
   return NextResponse.json(data[0]);
 };

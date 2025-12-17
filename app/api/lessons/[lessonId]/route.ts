@@ -7,7 +7,7 @@ import { isAdmin } from "@/lib/admin";
 
 export const GET = async (
   req: Request,
-  { params }: { params: Promise<{ lessonId: number }> }
+  { params }: { params: Promise<{ lessonId: string }> }
 ) => {
   const p = await params;
   if (!isAdmin()) {
@@ -15,7 +15,7 @@ export const GET = async (
   }
 
   const data = await db.query.lessons.findFirst({
-    where: eq(lessons.id, p.lessonId),
+    where: eq(lessons.id, Number(p.lessonId)),
   });
 
   return NextResponse.json(data);
@@ -23,7 +23,7 @@ export const GET = async (
 
 export const PUT = async (
   req: Request,
-  { params }: { params: Promise<{ lessonId: number }> }
+  { params }: { params: Promise<{ lessonId: string }> }
 ) => {
   const p = await params;
   if (!isAdmin()) {
@@ -36,7 +36,7 @@ export const PUT = async (
     .set({
       ...body,
     })
-    .where(eq(lessons.id, p.lessonId))
+    .where(eq(lessons.id, Number(p.lessonId)))
     .returning();
 
   return NextResponse.json(data[0]);
@@ -44,7 +44,7 @@ export const PUT = async (
 
 export const DELETE = async (
   req: Request,
-  { params }: { params: Promise<{ lessonId: number }> }
+  { params }: { params: Promise<{ lessonId: string }> }
 ) => {
   const p = await params;
   if (!isAdmin()) {
@@ -53,7 +53,7 @@ export const DELETE = async (
 
   const data = await db
     .delete(lessons)
-    .where(eq(lessons.id, p.lessonId))
+    .where(eq(lessons.id, Number(p.lessonId)))
     .returning();
 
   return NextResponse.json(data[0]);
