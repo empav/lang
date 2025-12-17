@@ -19,7 +19,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 1,
-              question: '¿Cuál de estos es "el hombre"?',
+              question: 'Which of these is "the man"?',
               options: [
                 {
                   text: "el hombre",
@@ -44,7 +44,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 2,
-              question: '¿Cuál de estos es "la mujer"?',
+              question: 'Which of these is "the woman"?',
               options: [
                 {
                   text: "la mujer",
@@ -69,7 +69,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 3,
-              question: '"el hombre"',
+              question: '"the man"',
               options: [
                 {
                   text: "el hombre",
@@ -91,7 +91,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 4,
-              question: '"la mujer"',
+              question: '"the woman"',
               options: [
                 {
                   text: "la mujer",
@@ -120,7 +120,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 1,
-              question: '¿Cuál de estos es "el niño"?',
+              question: 'Which of these is "the boy"?',
               options: [
                 {
                   text: "el niño",
@@ -145,7 +145,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 2,
-              question: '¿Cuál de estos es "la niña"?',
+              question: 'Which of these is "the girl"?',
               options: [
                 {
                   text: "la niña",
@@ -170,7 +170,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 3,
-              question: '"el niño"',
+              question: '"the boy"',
               options: [
                 { text: "el niño", correct: true, audioSrc: "/es/mp3/boy.mp3" },
                 {
@@ -188,7 +188,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 4,
-              question: '"la niña"',
+              question: '"the girl"',
               options: [
                 {
                   text: "la niña",
@@ -203,6 +203,380 @@ export const spanishSeed: SeedLanguage = {
                 {
                   text: "el robot",
                   correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Sustantivos (objetos)",
+          order: 3,
+
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the robot"?',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the zombie"?',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the robot"',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the zombie"',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the robot"?',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Sustantivos (repaso)",
+          order: 4,
+
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the man"?',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the girl"?',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the woman"',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the boy"',
+              options: [
+                { text: "el niño", correct: true, audioSrc: "/es/mp3/boy.mp3" },
+                {
+                  text: "la niña",
+                  correct: false,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Mezcla (unidad 1)",
+          order: 5,
+
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the boy"?',
+              options: [
+                {
+                  text: "el niño",
+                  correct: true,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the zombie"?',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the man"',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the girl"',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
                   audioSrc: "/es/mp3/robot.mp3",
                 },
               ],
@@ -224,7 +598,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 1,
-              question: '¿Cuál de estos es "el robot"?',
+              question: 'Which of these is "the robot"?',
               options: [
                 {
                   text: "el robot",
@@ -249,7 +623,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 2,
-              question: '"el robot"',
+              question: '"the robot"',
               options: [
                 {
                   text: "el robot",
@@ -268,6 +642,78 @@ export const spanishSeed: SeedLanguage = {
                 },
               ],
             },
+            {
+              type: "SELECT",
+              order: 3,
+              question: 'Which of these is "the man"?',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the man"',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the robot"?',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
           ],
         },
         {
@@ -277,7 +723,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 1,
-              question: '¿Cuál de estos es "el zombi"?',
+              question: 'Which of these is "the zombie"?',
               options: [
                 {
                   text: "el zombi",
@@ -302,7 +748,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 2,
-              question: '"el zombi"',
+              question: '"the zombie"',
               options: [
                 {
                   text: "el zombi",
@@ -318,6 +764,453 @@ export const spanishSeed: SeedLanguage = {
                   text: "la mujer",
                   correct: false,
                   audioSrc: "/es/mp3/woman.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 3,
+              question: 'Which of these is "the girl"?',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the girl"',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the zombie"?',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "La mujer",
+          order: 3,
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the man"?',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the woman"',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the man"',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "El hombre",
+          order: 4,
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the man"?',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the man"',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the woman"',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the man"?',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Mezcla (unidad 2)",
+          order: 5,
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the robot"?',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the zombie"',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the woman"',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the zombie"?',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
                 },
               ],
             },
@@ -338,7 +1231,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 1,
-              question: '¿Cuál de estos es "el hombre"?',
+              question: 'Which of these is "the man"?',
               options: [
                 {
                   text: "el hombre",
@@ -363,7 +1256,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "SELECT",
               order: 2,
-              question: '¿Cuál de estos es "la niña"?',
+              question: 'Which of these is "the girl"?',
               options: [
                 {
                   text: "la niña",
@@ -388,7 +1281,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 3,
-              question: '"la mujer"',
+              question: '"the woman"',
               options: [
                 {
                   text: "la mujer",
@@ -410,7 +1303,7 @@ export const spanishSeed: SeedLanguage = {
             {
               type: "ASSIST",
               order: 4,
-              question: '"el zombi"',
+              question: '"the zombie"',
               options: [
                 {
                   text: "el zombi",
@@ -426,6 +1319,527 @@ export const spanishSeed: SeedLanguage = {
                   text: "la niña",
                   correct: false,
                   audioSrc: "/es/mp3/girl.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the robot"?',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Personas",
+          order: 2,
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the man"?',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the man"',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the woman"',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the man"?',
+              options: [
+                {
+                  text: "el hombre",
+                  correct: true,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Niños",
+          order: 3,
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the boy"?',
+              options: [
+                {
+                  text: "el niño",
+                  correct: true,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the girl"?',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the boy"',
+              options: [
+                { text: "el niño", correct: true, audioSrc: "/es/mp3/boy.mp3" },
+                {
+                  text: "la niña",
+                  correct: false,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the girl"',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the girl"?',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Objetos y criaturas",
+          order: 4,
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the robot"?',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the zombie"?',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the robot"',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the zombie"',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the zombie"?',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Final",
+          order: 5,
+          challenges: [
+            {
+              type: "SELECT",
+              order: 1,
+              question: 'Which of these is "the woman"?',
+              options: [
+                {
+                  text: "la mujer",
+                  correct: true,
+                  imageSrc: "/es/svgs/woman.svg",
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el robot",
+                  correct: false,
+                  imageSrc: "/es/svgs/robot.svg",
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 2,
+              question: 'Which of these is "the boy"?',
+              options: [
+                {
+                  text: "el niño",
+                  correct: true,
+                  imageSrc: "/es/svgs/boy.svg",
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 3,
+              question: '"the girl"',
+              options: [
+                {
+                  text: "la niña",
+                  correct: true,
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "la mujer",
+                  correct: false,
+                  audioSrc: "/es/mp3/woman.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  audioSrc: "/es/mp3/man.mp3",
+                },
+              ],
+            },
+            {
+              type: "ASSIST",
+              order: 4,
+              question: '"the robot"',
+              options: [
+                {
+                  text: "el robot",
+                  correct: true,
+                  audioSrc: "/es/mp3/robot.mp3",
+                },
+                {
+                  text: "el zombi",
+                  correct: false,
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "el niño",
+                  correct: false,
+                  audioSrc: "/es/mp3/boy.mp3",
+                },
+              ],
+            },
+            {
+              type: "SELECT",
+              order: 5,
+              question: 'Which of these is "the zombie"?',
+              options: [
+                {
+                  text: "el zombi",
+                  correct: true,
+                  imageSrc: "/es/svgs/zombie.svg",
+                  audioSrc: "/es/mp3/zombie.mp3",
+                },
+                {
+                  text: "la niña",
+                  correct: false,
+                  imageSrc: "/es/svgs/girl.svg",
+                  audioSrc: "/es/mp3/girl.mp3",
+                },
+                {
+                  text: "el hombre",
+                  correct: false,
+                  imageSrc: "/es/svgs/man.svg",
+                  audioSrc: "/es/mp3/man.mp3",
                 },
               ],
             },
